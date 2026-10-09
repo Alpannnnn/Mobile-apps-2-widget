@@ -1,7 +1,7 @@
 
 // import 'dart:nativewrappers/_internal/vm/lib/internal_patch.dart';
 
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 // void main(){
 //   runApp(
@@ -13,51 +13,77 @@
 //   runApp(const MyWidget());
 // }
 
-// class MyWidget extends StatelessWidget {
-//   const MyWidget({super.key});
-//   static const hello = 'Hello World';
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       home: Scaffold(
-//         body: Center(
-//           child: Text('Hello World',
-//           ),
-//           ),
-//           ),
-//     );
+
+// class Sosmed {
+//   static String namaSosmed = "Instagram";
+
+//   String usernameSosmed;
+
+//   // Konstruktor untuk mengisi username 
+//   Sosmed(this.usernameSosmed);
+
+//   // Fungsi biasa untuk menampilkan info
+//   void akun() {
+//     print("Aplikasi : $namaSosmed, Username : $usernameSosmed");
 //   }
 // }
 
-class Sosmed {
-  static String namaSosmed = "Instagram";
+// void main() {
 
-  String usernameSosmed;
+//   print(Sosmed.namaSosmed); // Output: Instagram
 
-  // Konstruktor untuk mengisi username 
-  Sosmed(this.usernameSosmed);
+//   Sosmed user1 = Sosmed("@alpanvsuniverse");
+//   Sosmed user2 = Sosmed("@everyonehatesalpan");
 
-  // Fungsi biasa untuk menampilkan info
-  void akun() {
-    print("Aplikasi : $namaSosmed, Username : $usernameSosmed");
-  }
+//   user1.akun(); // Output: Aplikasi : Instagram, Username : @alpanvsuniverse
+//   user2.akun(); // Output: Aplikasi : Instagram, Username : @everyonehatesalpan
+
+//   Sosmed.namaSosmed = "Facebook";
+
+//   print("\n--- Setelah nama sosmed diubah ---");
+//   user1.akun(); // Output: Aplikasi : Facebook, Username : @alpanvsuniverse
+//   user2.akun(); // Output: Aplikasi : Facebook, Username : @everyonehatesalpan
+// }   
+
+ void main() {
+  // runApp(
+  //   const MaterialApp(
+  //     home: Scaffold(body: Center(child: Text('Hello, World!'))),
+  //   ),
+  // );
+  runApp(const MyWidget());
 }
 
-void main() {
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+  static const hello = 'Hello World';
 
-  print(Sosmed.namaSosmed); // Output: Instagram
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: BasicTextWidget(),
+          ),
+          ),
+    );
+  }
+  
+}
 
-  Sosmed user1 = Sosmed("@alpanvsuniverse");
-  Sosmed user2 = Sosmed("@everyonehatesalpan");
+class BasicTextWidget extends StatelessWidget {
+  const BasicTextWidget({super.key});
 
-  user1.akun(); // Output: Aplikasi : Instagram, Username : @alpanvsuniverse
-  user2.akun(); // Output: Aplikasi : Instagram, Username : @everyonehatesalpan
-
-  Sosmed.namaSosmed = "Facebook";
-
-  print("\n--- Setelah nama sosmed diubah ---");
-  user1.akun(); // Output: Aplikasi : Facebook, Username : @alpanvsuniverse
-  user2.akun(); // Output: Aplikasi : Facebook, Username : @everyonehatesalpan
-}   
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      'Halo saya Alfan',
+      style: TextStyle(
+        fontSize: 50,
+        color: Color.fromARGB(255, 239, 11, 11),
+      ),
+    );
+  }
+}
 
