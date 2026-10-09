@@ -47,43 +47,67 @@ import 'package:flutter/material.dart';
 // }   
 
  void main() {
-  // runApp(
-  //   const MaterialApp(
-  //     home: Scaffold(body: Center(child: Text('Hello, World!'))),
-  //   ),
-  // );
-  runApp(const MyWidget());
+  runApp(const MaterialApp(home: FontTextWidget(),));
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-  static const hello = 'Hello World';
+
+// class BasicTextWidget extends StatelessWidget {
+//   const BasicTextWidget({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Text(
+//       'Halo saya Alfan',
+//       style: TextStyle(
+//         fontSize: 50,
+//         color: Color.fromARGB(255, 239, 11, 11),
+//       ),
+//     );
+//   }
+// }
+
+class FontTextWidget extends StatelessWidget {
+  const FontTextWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: BasicTextWidget(),
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Normal',
+          style: TextStyle(
+            fontSize: 20,
           ),
+        ),
+
+        Text(
+          'Bold',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
           ),
+        ),
+
+        Text(
+          'Semi Bold',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+
+        Text(
+          'Italic',
+          style: TextStyle(
+            fontSize: 20,
+            fontStyle: FontStyle.italic,
+          ),
+        ),
+      ],
     );
   }
-  
 }
 
-class BasicTextWidget extends StatelessWidget {
-  const BasicTextWidget({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Text(
-      'Halo saya Alfan',
-      style: TextStyle(
-        fontSize: 50,
-        color: Color.fromARGB(255, 239, 11, 11),
-      ),
-    );
-  }
-}
 
